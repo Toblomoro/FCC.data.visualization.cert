@@ -62,9 +62,12 @@ let drawBars = () => {
     .select("body")
     .append("div")
     .attr("id", "tooltip")
-    .style("height", "auto")
-    .style("width", "auto")
-    .style("visibility", "hidden");
+    .style("background-color", "white")
+    .style("border", "solid")
+    .style("border-width", "2px")
+    .style("border-radius", "5px")
+    .style("padding", "5px")
+
 
   svg
     .selectAll("rect")
@@ -92,11 +95,13 @@ let drawBars = () => {
       tooltip.transition().style("visibility", "visible");
       document.querySelector("#tooltip").setAttribute("data-date", item[0]);
       document.querySelector("#tooltip").textContent = item[0];
-    })
+      })
     .on("mouseout", (item) => {
       tooltip.transition().style("visibility", "hidden");
       tooltip.text(item[0]);
     });
+    
+
 };
 
 let generateAxes = () => {

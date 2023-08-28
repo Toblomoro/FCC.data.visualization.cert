@@ -1,9 +1,35 @@
-body {
+
+body{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  }
+  svg{
+      background-color: rgb(140, 149, 233);
+
+  }
+.bar{
+
+  fill: rgb(17, 21, 219);
 }
-svg {
-  background-color: antiquewhite;
+#title{
+  font-size: 30px;
+  fill: #17252A;
+}
+.bar:hover{
+  fill: antiquewhite
+}
+
+#tooltip {
+  color:rgb(43, 3, 3);
+  text-align: center;
+
+  width: 140px;
+  height: 45px;
+  padding: 2px;
+  font: 12px;
+  background: rgb(183, 191, 201);
+  box-shadow: 1px 1px 10px;
+  border-radius: 4px;
 }
